@@ -5,6 +5,13 @@ import joblib
 from nltk.tokenize import sent_tokenize, word_tokenize
 import numpy as np
 
+import nltk
+
+nltk.download('punkt')
+nltk.download('punkt_tab')
+
+
+
 nltk.download('punkt')
 
 # Загружаем модель безопасно относительно этого файла
