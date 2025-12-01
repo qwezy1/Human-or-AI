@@ -11,7 +11,6 @@
 
 ## Структура проекта
 
-├─ backend/<br>
 │ ├─ app/<br>
 │ │ ├─ main.py # Flask сервер<br>
 │ │ ├─ model.py # ML модель и функция predict_class<br>
