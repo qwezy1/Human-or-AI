@@ -3,6 +3,9 @@
 ## Описание
 Проект позволяет определить, написана ли новость человеком или искусственным интеллектом. Пользователь вводит текст новости, система анализирует его и возвращает результат с уверенностью
 
+## Что нужно для запуска
+Нужен docker, открытые порты **3000** **80** **5173**
+
 ## Технологии
 - Backend: Python, Flask, Flask-RESTful
 - ML: обученная модель для классификации текста
@@ -12,15 +15,17 @@
 ## Структура проекта
 
 │ ├─ app/<br>
-│ │ ├─ main.py # Flask сервер<br>
-│ │ ├─ model.py # ML модель и функция predict_class<br>
+│ │ ├─ main.py # flask сервер<br>
+│ │ ├─ model.py # ML модель и функции<br>
 │ ├─ requirements.txt<br>
 │ └─ Dockerfile<br>
 ├─ frontend/<br>
 │ ├─ src/<br>
-│ │ ├─ App.vue # Основной Vue компонент<br>
+│ │ ├─ App.vue # основной Vue компонент<br>
 │ ├─ package.json<br>
 │ └─ Dockerfile<br>
+├─ gateway/<br>
+|   ├─nginx.conf # единный вход в приложение(зачем?)
 └─ docker-compose.yml
 
 
@@ -32,4 +37,4 @@ docker-compose up --build
 
 Использование:
 
-**Откройте [localhost:8080](http://localhost:8080/)**
+**Откройте [localhost:5173](http://localhost:5173/)**
